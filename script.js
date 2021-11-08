@@ -49,3 +49,26 @@ function generatePassword() {
   return generatedPassword;
 
 }
+
+
+//  ball pit of possibility: 
+//establish string length with the output of ansToPwdLength
+//string with 26 lower case letters
+//string with 26 upper case
+//string with both upper and lower 
+//string with characters " !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
+
+//Ask for INPUTs number length  OUTPUTs number length TO ansToPwdLength 
+//Ask for INPUT yes no cap output TO askToIncCapsOrNot
+//Ask for INPUT yes no spec char TO askToIncSpecChar
+//trying to create a string called generatedPassword
+//math.random to create a decimal from 0 to 1, then multiply by 10 then math floor 
+//not ansToPasswordLength.length
+
+//parameters: 
+
+ansToPasswordLength  //already established above
+
+var ballPitOfLetters = "abcdefghijklmnopqrstuvwxyz";
+var ballPitOfCaps = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var ballPitOfChars = " !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";  //escaped out the quote but rying to escape a backslash
