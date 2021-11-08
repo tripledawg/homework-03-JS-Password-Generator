@@ -46,7 +46,23 @@ function generatePassword() {
   }
 
   var generatedPassword = "";
-  return generatedPassword;
+
+  var ballPitOfLetters = "abcdefghijklmnopqrstuvwxyz";
+  var ballPitOfCaps = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  var ballPitOfChars = " !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";  //escaped out the quote but also trying to escape a backslash, not sure if took
+  
+  if (ansToIncludeCapOrNot) {//if user says yes to caps it adds the caps adds to the 'ballpit" of lower case letters which are a default to 
+    ballPitOfLetters += ballPitOfCaps; 
+  } 
+
+  if (ansToIncludeSpecChar) {
+    ballPitOfLetters += ballPitOfChars;//if user says yes to spec char it adds chars to the newly defined (or not) ballPitOfLetters
+  }
+
+var generatedPassword = ballPitOfLetters[Math.floor(Math.random()* ballPitOfLetters.length)];
+
+
+  return generatedPassword; //generates one single random letter or cap or character
 
 }
 
@@ -67,8 +83,6 @@ function generatePassword() {
 
 //parameters: 
 
-ansToPasswordLength  //already established above
+// ansToPasswordLength  //already established above
 
-var ballPitOfLetters = "abcdefghijklmnopqrstuvwxyz";
-var ballPitOfCaps = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-var ballPitOfChars = " !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";  //escaped out the quote but rying to escape a backslash
+
