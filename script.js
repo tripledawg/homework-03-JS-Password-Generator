@@ -50,21 +50,23 @@ function generatePassword() {
   var ballPitOfLetters = "abcdefghijklmnopqrstuvwxyz";
   var ballPitOfCaps = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   var ballPitOfChars = " !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";  //escaped out the quote but also trying to escape a backslash, not sure if took
-  
+
   if (ansToIncludeCapOrNot) {//if user says yes to caps it adds the caps adds to the 'ballpit" of lower case letters which are a default to 
-    ballPitOfLetters += ballPitOfCaps; 
-  } 
+    ballPitOfLetters += ballPitOfCaps;
+  }
 
   if (ansToIncludeSpecChar) {
     ballPitOfLetters += ballPitOfChars;//if user says yes to spec char it adds chars to the newly defined (or not) ballPitOfLetters
   }
 
-var generatedPassword = ballPitOfLetters[Math.floor(Math.random()* ballPitOfLetters.length)];
+  for (let i = 0; i < ansToPwdLength; i++) { //this is where the size is determined
+    generatedPassword += ballPitOfLetters[Math.floor(Math.random() * ballPitOfLetters.length)];//.floor to round decimal created from math.random, in these you multiply by the max amoount, which in this case is the length of the string of whaever the ballpit of opttions ends up being
+  }
 
-
-  return generatedPassword; //generates one single random letter or cap or character
-
+  return generatedPassword;
 }
+ //generates one single random letter or cap or character
+
 
 
 //  ball pit of possibility: 
