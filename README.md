@@ -1,5 +1,11 @@
 # homework-03-JS-Password-Generator
-user prompted password generator functions
+I created a function with two parts: a user input section and a password generation section. 
+
+For the user input section I used the prompt method for the open ended question about password length and then and if/else statements to verify the user entered the correct range of numbers. Alerts were given if not, and if the user input matched this part of the function returned a confirmation message.  Then I used the confirm method for the two yes/no boolean style questions about whether or not to include capital letters and/or special characters.  I used if/else alerts to validate what the user selected.  
+
+For the password generation section I had to think about the various possibilities.  First I created an empty string to contain the password.  I then created variables for all lower case, all caps, and special characters possibilities.  I then used if logic with the += operator to build the password based on the user input variables. Then I used a for loop including math.floor and math .random to to iterate the randomized password to a length based on the user input variable for password length.  
+
+Finally, I returned the generatedPassword varaible.  
 
 
 # 03 JavaScript: Password Generator
